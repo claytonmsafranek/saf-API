@@ -22,4 +22,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// setup cors
+app.UseCors(builder => builder.WithOrigins("http://localhost:5173"));
+
 app.Run();
