@@ -29,5 +29,11 @@ namespace saf_API.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet(Name = "TestMe")]
+        public string TestMe()
+        {
+            return "TEST SUCCESS";
+        }
     }
 }
