@@ -18,7 +18,7 @@ namespace saf_API.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet("weather", Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -30,7 +30,7 @@ namespace saf_API.Controllers
             .ToArray();
         }
 
-        [HttpGet(Name = "TestMe")]
+        [HttpGet("test-me", Name = "TestMe")]
         public string TestMe()
         {
             return "TEST SUCCESS";
